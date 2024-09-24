@@ -4,13 +4,14 @@
         operand2_list = []
         operator_list = []
         result_list = []
-        for each in problems:
+        for each in problems: #the first for loop
             each_splitted = each.split()
             all_elements.append(each_splitted)
+	#print(all_elements)
         if len(problems) > 5:
             print('Error: Too many problems.')
             exit()
-        for each_list in all_elements:
+        for each_list in all_elements: #the second for loop
             try:
                 operand1 = int(each_list[0])
                 if len(str(operand1)) >= 5:
@@ -32,7 +33,10 @@
             else:
                 print('Error: Operator must be '+' or '-'.')
                 exit()
-        for i in range(len(problems)):
+	#print(operand1_list)
+	#print(operand2_list)
+	#print(operator_list)
+        for i in range(len(problems)): #the third for loop
             if operator_list[i] == '+':
                 result = operand1_list[i] + operand2_list[i]
                 result_list.append(result)
@@ -41,6 +45,7 @@
                 result_list.append(result)
 	    else:
                 print("Error: Operator must be '+' or '-'.")		
+	#print(result_list)
         line1 = ''
         line2 = ''
         line3 = ''
